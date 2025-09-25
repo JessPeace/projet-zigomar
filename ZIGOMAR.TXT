@@ -1,0 +1,30 @@
+
+'''
+liste, boucles, fonctions. chaines de caractères
+faut programmer un SAC avce des choses dui peuvent entrer et sortir du SAC: dont une liste de choses:
+ des potions scintillantes, des clés mystérieuses, des boules brillantes, et même des squelettes miniatures.
+
+ TODO:on devras aussi définir une fonction pour arranger aléatoirement les items dans le sac pour ensuite les
+  organiser la liste en ordre alphabétique!
+
+TODO: fuat aussi programmer ZIGOMAR elle même: QUOTTE:
+Quand la chasse au trésor est terminée, Zigomar veut jouer à son mini-quiz farfelu :
+Tu mélanges tous les objets du sac de façon aléatoire.
+Tu attrapes un objet au hasard et Zigomar doit deviner ce que c’est.
+Si Elle devine juste, elle saute de joie et te remercie ; sinon, elle te lance un regard noir et grogne…
+
+todo: mettre une limite de 15 items dans la liste MAIS aussi coder une liste avec plus de 15 items pour
+todo:offrir la possibilitée d'en avoir trop!
+dont plus de dialogue a coder. car elle nous demandent quel items retirer, donc fuadrais faire un print de
+la liste a chaques fois qu'elle dépasse 15 items dans son sac.
+MAIS:
+TODO: QUOTTE:
+TODO: Parfois, il est automatique : elle retire tous les objets dont le nom contient un chiffre ou la lettre "b" (elle a clairement un toc!).
+todo:Parfois, elle te regarde (oui, toi !), et te demande quel objet tu veux qu’elle retire pour continuer sa chasse sans s’encombrer
+ (elle dira par le suite que c'est de ta faute si elle a perdu ses objets précieux!).
+
+ y'as pas que sa! faudras coder l'action de selection automatique!
+
+TODO: donc au moins un bool pour si Zigomar devine bien ou non.
+todo:coder le dialogue et faire apparaitre la liste une fois bien organisée pour terminer la journée.
+
