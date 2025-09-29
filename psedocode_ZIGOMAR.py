@@ -63,6 +63,7 @@ ls_inventaire.remove('boulles')
 find item print nb item
 if potion ajoute +(nb) to object index.
 
+len in ls_inventaire
 
 '''
 
@@ -72,19 +73,22 @@ if potion ajoute +(nb) to object index.
 Les listes
     objets_dans_sac []                      # C'est les objets qui sont déja dans le sac
     objets_a_mettre_d_sac []                # C'est les objets à mettre dans la sac
+    texte_inventaire []                     #inventaire en texte
     
-
 Variables
     new_object                              # C'est les nouveaux objets qu'elle ramasse dans une nouvelle journée
     random_items                            # Nombre random d'items à ajouté/présent
+    random_object                           #on veut que zigomar choisise un objet random.
+    random_choice                           #random choice entre vrais ou faux pour le mini-jeu.
     
     
 Fonctions
    newDay(objets_dans_sac, new_object)                       # Fonction pour la nouvelle journée
+   random_items(0 ,3):
    
    
    sac_plein(objet_dans_sac, objet_a_mettre_d_sac)
-   
+
    
    randomSac(objet_dans_sac)                # Randomiser le sac
         random.shuffle(objet_dans_sac)
@@ -96,3 +100,5 @@ Fonctions
         new random_items
         for i in range of random_items
 """
+
+#test
