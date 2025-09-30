@@ -1,4 +1,4 @@
-#Jonathan et Jessyka (SUR L'ACCOMPTE A NIC)
+#Jonathan et Jessyka (oui j'ai utilisée l'accompte a mon copain)
 
 import random
 
