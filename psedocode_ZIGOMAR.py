@@ -1,4 +1,4 @@
-#Jessyka et Jonathan
+# Jessyka et Jonathan
 '''
 
 donc au moins un bool pour si Zigomar devine bien ou non.
@@ -63,42 +63,60 @@ ls_inventaire.remove('boulles')
 find item print nb item
 if potion ajoute +(nb) to object index.
 
-len in ls_inventaire
 
 '''
-
-
 
 """
 Les listes
     objets_dans_sac []                      # C'est les objets qui sont déja dans le sac
     objets_a_mettre_d_sac []                # C'est les objets à mettre dans la sac
-    texte_inventaire []                     #inventaire en texte
-    
+    ls_inventaire []                        # C'est le texte de l'inventaire
+    ls_nb_items []                          # C'est le nombre d'items de chaque dans l'inventaire
+
+
 Variables
     new_object                              # C'est les nouveaux objets qu'elle ramasse dans une nouvelle journée
-    random_items                            # Nombre random d'items à ajouté/présent
-    random_object                           #on veut que zigomar choisise un objet random.
-    random_choice                           #random choice entre vrais ou faux pour le mini-jeu.
-    
-    
+    random_items = 0                        # Nombre random d'items à ajouté/présent
+    random_nb                               # Nombre random
+    len_liste = len.objets_dans_sac         # Longueur de l'inventaire
+    len_str_liste = objets_dans_sac[i]
+
 Fonctions
-   newDay(objets_dans_sac, new_object)                       # Fonction pour la nouvelle journée
-   random_items(0 ,3):
-   
-   
-   sac_plein(objet_dans_sac, objet_a_mettre_d_sac)
+    newDay(objets_dans_sac, new_object)                       # Fonction pour la nouvelle journée
 
-   
-   randomSac(objet_dans_sac)                # Randomiser le sac
+    sac_plein(objet_dans_sac, objet_a_mettre_d_sac)
+        random_nb =  random.randint(0, 1)
+        if random_nb == 1:
+            while i <= len_liste:
+                if objets_dans_sac[i].find("B", "b"):
+                    objets_dans_sac.pop(i)
+            i += 1 
+        else
+            print(text_inventaire)
+            while True:
+                try:
+                    objet_enlever = str(input("Quel objet à enlever"))
+                    if objet_enlever is str
+                        if objet_enlever in objets_dans_sac
+                            print(good)
+                            break
+                        else
+                            print(bad)
+                    else
+                        print(c'est pas un str)
+
+
+    randomSac(objet_dans_sac)                # Randomiser le sac
         random.shuffle(objet_dans_sac)
-        
-   randomChoice                            # C'est pour choisir un objet random pour le mini-quiz
-        random.choice(objet_dans_sac)
-        
-   start_sac(random_items, objets_dans_sac)
-        new random_items
-        for i in range of random_items
-"""
 
-#test
+    randomChoice                            # C'est pour choisir un objet random pour le mini-quiz
+        random.choice(objet_dans_sac)
+
+    start_sac(random_items, objets_dans_sac)
+        new random_items = random.randint(0, 3)
+        for i in range of random_items
+
+    text_inventaire()                       # Convertion du sac en texte genre 3 potions, instead of ["potion", "potion", "potion"]
+
+
+"""
