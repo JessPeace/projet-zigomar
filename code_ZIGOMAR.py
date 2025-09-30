@@ -19,6 +19,11 @@ def newDay(objets_dans_sac):                       # Fonction pour la nouvelle j
         random_items = random.randint(1, 3)
         for i in range (random_items):
             objets_dans_sac.append("squelettes miniatures")
+        while len(objets_dans_sac) > 15:
+            if len(objets_dans_sac) > 15:
+                sac_plein(objets_dans_sac)
+            else:
+                break
     text_inventaire(objets_dans_sac)
     print("debut de la nouvelle journée: \n", ls_inventaire)
     print("allons a l'aventure!")
@@ -27,7 +32,7 @@ def newDay(objets_dans_sac):                       # Fonction pour la nouvelle j
 def sac_plein(objets_dans_sac):
     print("Mon sac est plein!")
     random_nb =  random.randint(0, 1)
-    if random_nb == 1 and :
+    if random_nb == 1 and objets_dans_sac.find("boules brillantes"):
         for i in range (len(objets_dans_sac)):
             text_inventaire(objets_dans_sac)
             print(ls_inventaire)
