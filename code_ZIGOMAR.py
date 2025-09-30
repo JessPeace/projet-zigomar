@@ -55,9 +55,9 @@ def sac_plein(objets_dans_sac):
 def randomSac(objet_dans_sac):                # Randomiser le sac
     random.shuffle(objet_dans_sac)
 
-def randomChoice(objet_dans_sac):             # C'est pour choisir un objet random pour le mini-quiz
-    choice_random = random.choice(objet_dans_sac) # Choix random pour Mini-quiz
-    choice_zigomar = random.choice(objet_dans_sac)# Choix zigomar pour mini-quiz
+def randomChoice(objet_dans_sac):                       # C'est pour choisir un objet random pour le mini-quiz
+    choice_random = random.choice(objet_dans_sac)       # Choix random pour Mini-quiz
+    choice_zigomar = random.choice(objet_dans_sac)      # Choix zigomar pour mini-quiz
     if choice_random != choice_zigomar:
         print("Tu as triché! Je suis sûre que je l'avais!")
     else:
@@ -67,7 +67,7 @@ def start_sac(objets_dans_sac, ls_inventaire):
     random_items = random.randint(0, 3)
     for i in range (random_items):
         objets_dans_sac.append("potions scintillantes")
-    ls_inventaire.append(str(random_items, " potions scintillante, "))
+    ls_inventaire.append(f"{random_items} potions scintillante")
     random_items = random.randint(0, 3)
     for i in range (random_items):
         objets_dans_sac.append("clés mystérieuses")
@@ -101,6 +101,7 @@ def sort_end_day(objets_dans_sac):
     sorted(objets_dans_sac)
     text_inventaire(objets_dans_sac)
     print(ls_inventaire)
+
 
 
 #Listes
