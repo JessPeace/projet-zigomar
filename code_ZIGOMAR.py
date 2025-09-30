@@ -1,4 +1,5 @@
-#Jonathan et Jessyka
+#Jonathan et Jessyka (SUR L'ACCOMPTE A NIC)
+
 import random
 
 def newDay(objets_dans_sac, new_object):                       # Fonction pour la nouvelle journée
@@ -39,7 +40,20 @@ def randomChoice(objet_dans_sac):             # C'est pour choisir un objet rand
 def start_sac(random_items, objets_dans_sac):
     random_items = random.randint(0, 3)
     for i in range (random_items):
-        objets_dans_sac.app
+        objets_dans_sac.append("potions scintillantes")
+    ls_inventaire.append(str(random_items, " potions scintillante, "))
+    random_items = random.randint(0, 3)
+    for i in range (random_items):
+        objets_dans_sac.append("clés mystérieuses")
+    ls_inventaire += str(random_items, " clés mystérieuses, ")
+    random_items = random.randint(0, 3)
+    for i in range (random_items):
+        objets_dans_sac.append("boules brillantes")
+    ls_inventaire += str(random_items, " boules brillantes, ")
+    random_items = random.randint(0, 3)
+    for i in range (random_items):
+        objets_dans_sac.append("squelettes miniatures")
+    ls_inventaire += str(random_items, " boules brillantes")
 
 def text_inventaire() :                      # Convertion du sac en texte genre 3 potions, instead of ["potion", "potion", "potion"]
     print("test")
