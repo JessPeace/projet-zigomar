@@ -19,22 +19,18 @@ def newDay(objets_dans_sac):                       # Fonction pour la nouvelle j
         random_items = random.randint(1, 3)
         for i in range (random_items):
             objets_dans_sac.append("squelettes miniatures")
-        while len(objets_dans_sac) > 15:
-            if len(objets_dans_sac) > 15:
-                sac_plein(objets_dans_sac)
-            else:
-                break
-    text_inventaire(objets_dans_sac)
-    print("debut de la nouvelle journée: \n", ls_inventaire)
-    print("allons a l'aventure!")
+    ls_inventaire = text_inventaire(objets_dans_sac)
+    print("debut de la nouvelle journée:")
+    print("allons a l'aventure! \n", ls_inventaire)
 
 
 def sac_plein(objets_dans_sac):
     print("Mon sac est plein!")
     random_nb =  random.randint(0, 1)
-    if random_nb == 1 and objets_dans_sac.find("boules brillantes"):
+    #if random_nb == 1 and objets_dans_sac.find("boules brillantes"):
+    if random_nb == 1 and 'boules brillantes' in objets_dans_sac:
         for i in range (len(objets_dans_sac)):
-            text_inventaire(objets_dans_sac)
+            ls_inventaire = text_inventaire(objets_dans_sac)
             print(ls_inventaire)
             if objets_dans_sac[i].find("boules brillantes"):
                 objets_dans_sac.pop(i)
@@ -42,7 +38,7 @@ def sac_plein(objets_dans_sac):
 
     else:
         while True:
-            text_inventaire(objets_dans_sac)
+            ls_inventaire = text_inventaire(objets_dans_sac)
             print(ls_inventaire)
             objet_enlever = str(input("Bah, toi choisis,j'arrive pas à me décider!"))
             try:
@@ -90,7 +86,7 @@ def text_inventaire(objets_dans_sac) :                       # Convertion du sac
     ls_inventaire = []
 
     inventaire_en_texte = objets_dans_sac.count("potions scintillantes")
-    ls_inventaire.append(f"{inventaire_en_texte} potions scintillante")
+    ls_inventaire.append(f"{inventaire_en_texte} potions scintillantes")
 
     inventaire_en_texte = objets_dans_sac.count("clés mystérieuses")
     ls_inventaire.append(f"{inventaire_en_texte} clés mystérieuses")
@@ -101,10 +97,12 @@ def text_inventaire(objets_dans_sac) :                       # Convertion du sac
     inventaire_en_texte = objets_dans_sac.count("squelettes miniatures")
     ls_inventaire.append(f"{inventaire_en_texte} squelettes miniatures")
 
+    return ls_inventaire
+
 def sort_end_day(objets_dans_sac):
     print("ALORS! avant de finir cette splendide journée d'aventure, FAUT TRIER MON SAC!")
     sorted(objets_dans_sac)
-    text_inventaire(objets_dans_sac)
+    ls_inventaire = text_inventaire(objets_dans_sac)
     print(ls_inventaire)
 
 
@@ -122,14 +120,14 @@ random_nb = 0                            # Nombre random
 
 if __name__ == '__main__':
     start_sac(objets_dans_sac, ls_inventaire)
-    for i in range(1):
+    for i in range(7):
         newDay(objets_dans_sac)
         while len(objets_dans_sac) > 15:
             if len(objets_dans_sac) > 15:
                 sac_plein(objets_dans_sac)
             else:
                 break
-        text_inventaire(objets_dans_sac)
+        ls_inventaire = text_inventaire(objets_dans_sac)
         sort_end_day(objets_dans_sac)
         randomSac(objets_dans_sac)
         randomChoice(objets_dans_sac)
