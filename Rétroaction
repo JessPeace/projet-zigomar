@@ -1,0 +1,6 @@
+Le programme plante :
+Accès à un indice qui n'exite pas dans la liste quand on retire des objet du sac.
+Code découpé en fonctions.
+Les fonctions doivent être documentées.
+En français on met les accents et les majuscules.
+

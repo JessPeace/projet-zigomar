@@ -28,12 +28,15 @@ def sac_plein(objets_dans_sac):
     print("Mon sac est plein!")                                         #fonction pour que zigomar nous fasses signe quands son sac est plein et les choix qu'elle fait (random entre vrais et faux).
     random_nb =  random.randint(0, 1)                              #partie codée pour qu'elle retire automatiquement l'item avec un 'b' dedans.
     if random_nb == 1 and 'boules brillantes' in objets_dans_sac:
-        for i in range (len(objets_dans_sac)):
+        for i in range (len(objets_dans_sac)):  # LA TAILLE EST VÉRIFIÉE SEULEMENT AU DÉBUT
             ls_inventaire = text_inventaire(objets_dans_sac)
             print(ls_inventaire)
-            if objets_dans_sac[i].find("boules brillantes"):
-                objets_dans_sac.pop(i)
-                print("on enlève cet objet abjecte!")
+            try:
+                if objets_dans_sac[i].find("boules brillantes"): # CETTE LIGNE CAUSE UNE EXCEPTION
+                    objets_dans_sac.pop(i) # COMME ON RETIR DES OBJETS DANS LA BOUCLE, LA LISTE RAPETISSE
+                    print("on enlève cet objet abjecte!")
+            except:
+                print("fin de la liste")
 
     else:
         while True:
