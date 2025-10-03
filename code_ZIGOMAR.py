@@ -1,7 +1,7 @@
 #Jonathan et Jessyka (oui j'ai utilisée l'accompte a mon copain)
 
 import random
-from os import remove
+#from os import remove
 
 
 def newDay(objets_dans_sac):
@@ -44,7 +44,7 @@ def sac_plein(objets_dans_sac):
             print(ls_inventaire)
             objet_enlever = str(input("Bah, toi choisis,j'arrive pas à me décider!"))
             try:
-                objet_enlever is str
+                objet_enlever is str # CETTE COMMANDE NE FAIT RIEN
                 if objet_enlever in objets_dans_sac:
                     objets_dans_sac.remove(objet_enlever)
                     print("on enlève ", objet_enlever, " alors!")

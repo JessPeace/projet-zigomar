@@ -3,4 +3,6 @@ Accès à un indice qui n'exite pas dans la liste quand on retire des objet du s
 Code découpé en fonctions.
 Les fonctions doivent être documentées.
 En français on met les accents et les majuscules.
+Le tri final ne semble pas fonctionner car text_inventaire reprends toujours le même ordre.
+Le pseudocode doit être mieu structuré.
 
